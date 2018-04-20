@@ -299,7 +299,7 @@ ggplot(plot3, aes(Total, V2, color = Total)) +
   theme(plot.title = element_text(size = rel(2))) +
   geom_smooth(method=lm) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, max(plot3\$V2)+max(plot3\$V2)/5))+
-  annotate(x=min(plot3\$Total)+(max(plot3\$Total)-min(plot3\$Total))/5, y=max(plot3\$V2)+(max(plot3\$V2)-min(plot3\$V2))/5,label=paste(\"R = \", round(cor(plot3\$V2,plot3\$Total),2)),geom=\"text\", size=8, col=\"darkred\")
+  annotate(x=min(plot3\$Total)+(max(plot3\$Total)-min(plot3\$Total))/5, y=max(plot3\$V2)+(max(plot3\$V2)-min(plot3\$V2))/6,label=paste(\"R = \", round(cor(plot3\$V2,plot3\$Total),2)),geom=\"text\", size=8, col=\"darkred\")
 
 
   
