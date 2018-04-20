@@ -287,20 +287,28 @@ for (l in 1:length(listing2)){
 plot2<-na.omit(plot)
 plot3<-as.data.frame(plot2)
 
+colnames(plot3)<-c(\"Total\", \"V2\")
 
 
 pdf(\"output.pdf\")
-ggplot(plot3, aes(V1, V2, color = V1)) +
+ggplot(plot3, aes(Total, V2, color = Total)) +
   geom_point(shape = 16, size = 5, show.legend = FALSE, alpha = .4) +
   theme_minimal() +
   scale_color_gradient(low = \"#0091ff\", high = \"#f0650e\") +
-  theme(axis.text=element_text(size=24),axis.title=element_text(size=26))+ labs(title = \"$GENENAME Causality Test\", x=\"CAD Risk SNPs Total\", y=\"$GENENAME expression\") + theme(plot.title = element_text(size = rel(2)))+
-  geom_smooth(method=lm)
+  theme(axis.text=element_text(size=24),axis.title=element_text(size=26))+ labs(title = \"$GENENAME Causality Test\", x=\"CAD Risk SNPs Total\", y=\"$GENENAME expression\") +
+  theme(plot.title = element_text(size = rel(2))) +
+  geom_smooth(method=lm) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, max(plot3\$V2)+max(plot3\$V2)/5))+
+  annotate(x=min(plot3\$Total)+(max(plot3\$Total)-min(plot3\$Total))/5, y=max(plot3\$V2)+(max(plot3\$V2)-min(plot3\$V2))/5,label=paste(\"R = \", round(cor(plot3\$V2,plot3\$Total),2)),geom=\"text\", size=8, col=\"darkred\")
+
+
+  
 
 dev.off()
 "> script.R
 
 chmod 775 script.R
 ./script.R
+
 
 
