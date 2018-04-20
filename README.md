@@ -64,7 +64,7 @@ File GENOTYPES.combined.even.HEADER contains risk SNP matrix with counts represe
 
 The sample correlation matrix representing the haplotype structure for the tested region is calculated as a 0/1 matrix with 1 representing full correlation between haplotypes and outputed as **correlation_matrix.pdf** in the folder **HCASMC_genotypes**.
 
-![alt text]()
+![alt text](https://github.com/milospjanic/UniqueHaplotypeTestCAD/blob/master/correlation_matrix.png)
 
 Running the script. Place gene name in a file gene.txt, and provide gene.txt, chromosome, distance and p-value threshold as arguments:
 
