@@ -98,5 +98,5 @@ Another example is a gene that is negatively assotiated with the CAD trait (i.e.
 
 After UniqueHaplotypeTestCAD correction:
 
-![alt text](https://github.com/milospjanic/UniqueHaplotypeTestCAD/blob/master/gene2_unique_haplotype_test.png)
+![alt text](https://github.com/milospjanic/UniqueHaplotypeTestCAD/blob/master/gene2_unique_haplotype-test.png)
 
