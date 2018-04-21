@@ -256,6 +256,12 @@ for (k in 1:ncol(x)){
 }
 
 p.dat<-as.data.frame(p)
+
+pdf(\"correlation_matrix.pdf\")
+require(lattice)
+levelplot(n)
+dev.off()
+
 listing<-list()
 
 for (l in 1:ncol(x)){
