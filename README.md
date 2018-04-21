@@ -72,6 +72,14 @@ Running the script. Place gene name in a file gene.txt, and provide gene.txt, ch
 ./UniqueHaplotypeTestCAD.sh gene.txt 11 100000 0.00001
 </pre>
 
+# Dependences
+
+UniqueHaplotypeTestCAD requires biomaRt installed in R. In case the biomaRt repository is down run this command to substitute the repository URL with the archive version of biomaRt:
+
+<pre>
+sed -i 's/grch37.ensembl.org/jul2016.archive.ensembl.org/g' UniqueHaplotypeTestCAD.sh
+</pre>
+
 # Examples
 
 By resolving the local haplotype structure, UniqueHaplotypeTestCAD might improve correlation of gene expression with the increased number of risk SNPs made by GeneCausalityTest. This is particularly evident in regions of strong linkage disequilibrium where SNPs are co-inherited in blocks and passed through generations in groups. 
