@@ -92,6 +92,6 @@ After resolving the local haplotype structure by UniqueHaplotypeTestCAD:
 
 ![alt text](https://github.com/milospjanic/UniqueHaplotypeTestCAD/blob/master/gene1_unique_haplotype_test.png)
 
-On the other hand, gene might be causal and showing negative correlation with the trait:
+Another example is a gene that is negatively assotiated with the CAD trait (i.e. with the CAD risk allele count). The correlation that GeneCausalityTest reports is 0.11, while UniqueHaplotypeTestCAD improves the correlation to 0.25 by resolving the local haplotype structure of this locus that also shows strong linkage disequilibrium.
 
 ![alt text](https://github.com/milospjanic/GeneCausalityTestCAD/blob/master/test29.png)
