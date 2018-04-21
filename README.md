@@ -74,7 +74,9 @@ Running the script. Place gene name in a file gene.txt, and provide gene.txt, ch
 
 # Examples
 
-By resolving the local haplotype structure the UniqueHaplotypeTestCAD might improve correlation of gene expression with the increased number of risk SNPs made by GeneCausalityTest. This is particularly evident 
+By resolving the local haplotype structure, UniqueHaplotypeTestCAD might improve correlation of gene expression with the increased number of risk SNPs made by GeneCausalityTest. This is particularly evident in regions of strong linkage disequilibrium where SNPs are co-inherited in blocks and passed through generations in groups. 
+
+Here is an example of a gene that is positively assotiated with the CAD trait (i.e. with the CAD risk allele count), and the correlation that GeneCausalityTest reports is 0.25, probably lower due to the strong linkage disequilibrium in the region that is evident from the graph as samples tend to pile up in groups, due to co-inheritence of risk SNPs. UniqueHaplotypeTestCAD will resolve the local haplotype structure and improve correlation from 0.25 to 0.45:
 
 ![alt text](https://github.com/milospjanic/GeneCausalityTestCAD/blob/master/test24.png)
 
